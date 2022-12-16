@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Sprites/hero_animated_sprite.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 28, 24 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 5.5, 3.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 5.5, 3.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 5, 3 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 4.5, 2.5 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+position = Vector2( 112, 416 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 8 )
+shape = SubResource( 1 )
+one_way_collision_margin = 0.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "idle"
+playing = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+process_mode = 0
+smoothing_speed = 1.0
+
+[node name="Coliders" type="Node" parent="."]
+
+[node name="Left Hand" type="Area2D" parent="Coliders"]
+
+[node name="Left Hand Coll" type="CollisionShape2D" parent="Coliders/Left Hand" groups=["P1 Hand Feet Coll"]]
+position = Vector2( 136.5, 432.5 )
+shape = SubResource( 2 )
+
+[node name="Right Hand" type="Area2D" parent="Coliders"]
+
+[node name="Right Hand Coll" type="CollisionShape2D" parent="Coliders/Right Hand" groups=["P1 Hand Feet Coll"]]
+position = Vector2( 100.5, 437.5 )
+shape = SubResource( 3 )
+
+[node name="Left Foot" type="Area2D" parent="Coliders"]
+
+[node name="Left Foot Coll" type="CollisionShape2D" parent="Coliders/Left Foot" groups=["P1 Hand Feet Coll"]]
+position = Vector2( 125, 445 )
+shape = SubResource( 4 )
+
+[node name="Right Foot" type="Area2D" parent="Coliders"]
+
+[node name="Right Foot Coll" type="CollisionShape2D" parent="Coliders/Right Foot" groups=["P1 Hand Feet Coll"]]
+position = Vector2( 101.5, 445.5 )
+shape = SubResource( 5 )
