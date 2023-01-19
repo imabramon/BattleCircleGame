@@ -30,16 +30,6 @@ animations = [ {
 "name": "arm hit",
 "speed": 14.0
 }, {
-"frames": [ ExtResource( 11 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "jump",
-"speed": 4.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "running",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 13 ), ExtResource( 22 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 18 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "foot hit",
@@ -49,4 +39,14 @@ animations = [ {
 "loop": true,
 "name": "idle",
 "speed": 4.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "jump",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "running",
+"speed": 12.0
 } ]
